@@ -52,13 +52,13 @@ jestli seš spoko, tak vypni preview webu (ctrl-C). smaž projistotu build soubo
 ve složce `_site/` je teď buildnutý statický web z html souborů a tak. obsah složky nahraješ na hosting a je hotovo.
 
 ## TODO
-- favicon
-- metadata v `<head>`
-- komentáře
-- mobilní layout detailu obrázku
-- lepší optimalizace maybe
-- hezčí font možná
-- víc ikonek na sociální sítě mby
-- *about me* stránka
-- zničit flash of unstyled content
-- jít spát
+[ ] favicon
+[ ] metadata v `<head>`
+[ ] komentáře
+[x] mobilní layout detailu obrázku
+[ ] lepší optimalizace maybe
+[ ] hezčí font možná
+[ ] víc ikonek na sociální sítě mby
+[ ] *about me* stránka
+[ ] zničit flash of unstyled content
+[ ] jít spát
