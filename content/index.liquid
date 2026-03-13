@@ -8,20 +8,21 @@
 {% block content %}
 
 <div class="image-grid">
+  <div id="grid-size" class="_displaynone" aria-hidden="true"></div>
   {% assign art-pieces = art-pieces | sortByDate %}
   {% for piece in art-pieces %}
   {% if piece.height and piece.width %}
-  {% assign height = piece.height | divided_by: piece.width | times: 230 %}
+  {% assign ratio = piece.width | divided_by: piece.height %}
   {% endif %}
   <div class="grid-piece">
     <a href="/art/{{ piece.title | slug }}" aria-label="Gallery {{ piece.type }} {{ piece.title }}" class="_a-unstyled">
       {% if piece.type == "image" %}
       <img {% if piece.cloudinaryId %} src="{% cloudinaryImg piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {%
-        endif %} alt="{{piece.alt}}" width="230" {% if height %} height="{{ height }}" {% endif %} loading="lazy" />
+        endif %} alt="{{piece.alt}}" width="230" {% if ratio %} style="aspect-ratio:{{ ratio }} auto" {% endif %} loading="lazy" />
       {% else %}
       <video {% if piece.cloudinaryId %} src="{% cloudinaryVideo piece.cloudinaryId %}"
         poster="{% cloudinaryVideoThumbnail piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {% endif %}
-        alt="{{piece.alt}}" width="230" {% if height %} height="{{ height }}" {% endif %} loop onmouseenter="play()"
+        alt="{{piece.alt}}" width="230" {% if ratio %} style="aspect-ratio:{{ ratio }} auto" {% endif %} loop onmouseenter="play()"
         onmouseleave="pause()"></video>
       {% endif %}
       <p class="grid-piece__title">{{ piece.title }}</p>
@@ -70,14 +71,27 @@
     margin-block-start: 0.5em;
     margin-block-end: 0;
   }
+
+  .grid-piece img,
+  .grid-piece video,
+  #grid-size {
+    width: 230px;
+  }
+
+  @media (max-width: 500px) {
+    .grid-piece img,
+    .grid-piece video, #grid-size {
+      width: 40dvw;
+    }
+  }
 </style>
 
 <script>
-  var elem = document.querySelector('.image-grid');
-  var msnry = new Masonry(elem, {
+  let elem = document.querySelector('.image-grid');
+  let msnry = new Masonry(elem, {
     // options
     itemSelector: '.grid-piece',
-    columnWidth: 230,
+    columnWidth: '#grid-size',
     gutter: 16,
     fitWidth: true
   });
