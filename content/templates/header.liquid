@@ -1,0 +1,31 @@
+<header class="pageheader">
+  <a href="/" class="_a-unstyled pageheader__pagetitle">Franta Tomáš</a>
+  <ul class="pageheader__links _list-unstyled">
+    <li><a href="https://www.instagram.com/franklys.t" class="icon">
+        {% include 'templates/includes/insta-icon.liquid' %}
+      </a></li>
+    <li><a href="https://www.pinterest.com/franklyst/random-renders-concepts/" class="icon">
+        {% include 'templates/includes/pinterest-icon.liquid' %}
+      </a></li>
+  </ul>
+</header>
+<style>
+  .pageheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    /* width: 100%; */
+  }
+
+  .pageheader__pagetitle {
+    font-weight: bold;
+    font-size: min(3rem, max(10dvw, 2rem));
+  }
+
+  .pageheader__links {
+    display: flex;
+    gap: 1em;
+    margin-block: 0;
+  }
+</style>

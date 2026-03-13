@@ -1,0 +1,71 @@
+[
+  {
+    "title": "not a jumpscare",
+    "date": "2026-01-09",
+    "desc": "Toto neni jumscare trust me",
+    "type": "video",
+    "alt": "desivy jumscare",
+    "cloudinaryId": "jumpscare",
+    "customDetails": false
+  },
+  {
+    "title": "Stůl s kytkou",
+    "date": "2026-01-02",
+    "desc": "Krásný stůl na kterém je kytka a tak...",
+    "url": "https://images.pexels.com/photos/36375380/pexels-photo-36375380.jpeg",
+    "type": "image",
+    "alt": "Stul, na nem cervena kytka, dva talire, pribory, sklenicky, bily ubrus",
+    "customDetails": false
+  },
+  {
+    "title": "crt guy",
+    "date": "2026-01-03",
+    "desc": "Jedna moje animace",
+    "type": "video",
+    "alt": "blah blah blah popis pro nevidome",
+    "cloudinaryId": "crt_guy"
+  },
+  {
+    "title": "Stůl s kytkou 2",
+    "date": "2026-01-04",
+    "desc": "Krásný stůl na kterém je kytka a tak...",
+    "url": "https://images.pexels.com/photos/36375380/pexels-photo-36375380.jpeg",
+    "type": "image",
+    "alt": "Stul, na nem cervena kytka, dva talire, pribory, sklenicky, bily ubrus",
+    "customDetails": false
+  },
+  {
+    "title": "freddy",
+    "date": "2026-01-05",
+    "desc": "Medved lol",
+    "type": "image",
+    "alt": "roztomily medvidek ve tme",
+    "cloudinaryId": "animatronik"
+  },
+  {
+    "title": "Stůl s kytkou 3",
+    "date": "2026-01-06",
+    "desc": "Krásný stůl na kterém je kytka a tak...",
+    "url": "https://images.pexels.com/photos/36375380/pexels-photo-36375380.jpeg",
+    "type": "image",
+    "alt": "Stul, na nem cervena kytka, dva talire, pribory, sklenicky, bily ubrus",
+    "customDetails": false
+  },
+  {
+    "title": "turnov render",
+    "date": "2026-01-07",
+    "desc": "muj novy render, enjoy",
+    "cloudinaryId": "turnov_first_render",
+    "type": "video",
+    "alt": "auta jezdi po mostu"
+  },
+  {
+    "title": "Stůl s kytkou 4",
+    "date": "2026-01-08",
+    "desc": "Krásný stůl na kterém je kytka a tak...",
+    "url": "https://images.pexels.com/photos/36375380/pexels-photo-36375380.jpeg",
+    "type": "image",
+    "alt": "Stul, na nem cervena kytka, dva talire, pribory, sklenicky, bily ubrus",
+    "customDetails": false
+  }
+]

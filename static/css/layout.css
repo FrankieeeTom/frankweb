@@ -1,0 +1,21 @@
+body {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 6rem 1fr 8rem;
+  row-gap: 1rem;
+  grid-template-columns: 1fr calc(100vw - 20px) 1fr;
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    "footer footer footer";
+}
+
+.pageheader {
+  grid-area: header;
+}
+.pagefooter {
+  grid-area: footer;
+}
+#main {
+  grid-area: main;
+}

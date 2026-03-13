@@ -1,0 +1,102 @@
+---js
+{
+pagination: {
+data: "art-pieces",
+size: 1,
+alias: "piece",
+before: function(paginationData, fullData) {
+// `fullData` is new in v1.0.1 and contains the full Data Cascade thus far
+
+return paginationData.filter(item => (!item.hasOwnProperty("customDetails") || item.customDetails == false)).sort((a, b) => a.date < b.date ? -1 : 1);
+}
+},
+permalink: "/art/{{ piece.title | slug }}/",
+}
+
+---
+
+{% layout "templates/base.liquid" %}
+{% block content %}
+<div class="art-section">
+
+  {% if piece.type == "image" %}
+  <img {% if piece.cloudinaryId %} src="{% cloudinaryImg piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {% endif
+    %} alt="{{piece.alt}}" />
+  {% else %}
+  <video {% if piece.cloudinaryId %} src="{% cloudinaryVideo piece.cloudinaryId %}"
+    poster="{% cloudinaryVideoThumbnail piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {% endif %}
+    alt="{{piece.alt}}" loop controls autoplay></video>
+  {% endif %}
+
+</div>
+<div class="info-section">
+  <h1>{{ piece.title }}</h1>
+  <b>{{ piece.date }}</b>
+  <div class="piece-description">
+    <p>{{ piece.desc }}</p>
+  </div>
+  <hr>
+  <p>Here will be comments...</p>
+</div>
+<div class="prev-next">
+  {% if pagination.href.previous %}
+  <a class="prev _a-unstyled" href="{{ pagination.href.previous }}">Previous</a>
+  {% endif %}
+  {% if pagination.href.next %}
+  <a class="next _a-unstyled" href="{{ pagination.href.next }}">Next</a>
+  {% endif %}
+</div>
+
+<style>
+  #main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr auto;
+    row-gap: 2rem;
+    grid-template-areas: "art info"
+      "nav nav";
+  }
+
+  .art-section {
+    text-align: center;
+    grid-area: art;
+  }
+  .info-section {
+    grid-area: info;
+  }
+
+  .art-section img,
+  .art-section video {
+    max-height: 80dvh;
+    max-width: 95%;
+  }
+
+  .prev-next {
+    grid-area: nav;
+    display: grid;
+    padding-inline: 1rem;
+
+    & .prev, & .next {
+      grid-area: 1 / 1;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary);
+      font-size: 1.5rem;
+      padding: 0.3rem;
+      border-radius: 6px;
+
+      &:hover {
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+      }
+    }
+
+    & .prev {
+      justify-self: start;
+    }
+
+    & .next {
+      justify-self: end;
+    }
+  }
+</style>
+{% endblock content %}
