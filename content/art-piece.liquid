@@ -57,6 +57,30 @@ permalink: "/art/{{ piece.title | slug }}/",
       "nav nav";
   }
 
+  .art-section img,
+  .art-section video {
+    max-height: 80dvh;
+    max-width: 95%;
+  }
+
+  @media (max-width: 600px) {
+    #main {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "art" "info" "nav";
+    }
+
+    .art-section img,
+    .art-section video {
+      max-height: 60dvh;
+    }
+
+    .info-section {
+      padding-inline: 1rem;
+    }
+
+  }
+
   .art-section {
     text-align: center;
     grid-area: art;
@@ -65,11 +89,6 @@ permalink: "/art/{{ piece.title | slug }}/",
     grid-area: info;
   }
 
-  .art-section img,
-  .art-section video {
-    max-height: 80dvh;
-    max-width: 95%;
-  }
 
   .prev-next {
     grid-area: nav;
