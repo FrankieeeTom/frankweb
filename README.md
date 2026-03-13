@@ -60,5 +60,7 @@ ve složce `_site/` je teď buildnutý statický web z html souborů a tak. obsa
 - [ ] hezčí font možná
 - [ ] víc ikonek na sociální sítě mby
 - [ ] *about me* stránka
-- [ ] zničit flash of unstyled content
-- [ ] jít spát
+- [x] zničit flash of unstyled content
+- [x] jít spát
+- [ ] page 404
+- [ ] ziskat vysku videa pri buildu
