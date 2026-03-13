@@ -73,4 +73,4 @@ ve složce `_site/` je teď buildnutý statický web z html souborů a tak. obsa
 - [x] zničit flash of unstyled content
 - [x] jít spát
 - [ ] page 404
-- [ ] ziskat vysku videa pri buildu
+- [x] ziskat vysku videa pri buildu
