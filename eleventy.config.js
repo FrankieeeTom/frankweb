@@ -1,9 +1,10 @@
+import 'dotenv/config'
 import { DateTime } from "luxon";
 import { Cloudinary } from '@cloudinary/url-gen';
 const cloudinary = new Cloudinary({
   cloud: {
-    cloudName: 'dt4tzhayc'
-  }
+    cloudName: process.env.CLOUDINARY_NAME
+    }
 });
 
 const TIME_ZONE = "Europe/Prague";

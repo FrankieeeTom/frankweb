@@ -6,8 +6,13 @@
 - `pnpm install`
 - můžeš `pnpm update`
 - založ si free účet na [Cloudinary](https://cloudinary.com)
-- otevři soubor `eleventy.config.js`
-- na první řádce nastav proměnnou `CLOUDINARY_ACC` na id svého účtu
+- vytvoř soubor s názvem `.env`
+- dej do něj id svého účtu, takhle:
+
+```env
+CLOUDINARY_NAME=dt4tzhayc
+```
+(jen se svým id, tohle je moje)
 
 ## přidávání obrázků / videí
 - nahraj obrázek/video do Cloudinary
@@ -41,6 +46,11 @@ Každý objekt je jeden obrázek nebo video. Vypadá takto:
 `cloudinaryId` je to id co sis zkopírovával. Pokud chceš dát na web soubor co je jinde než na Cloudinary, dej tam místo `cloudinaryId` `url`, kam dáš celou url adresu souboru. takže `"url": "https://example.com/mojevideo.mp4"`
 
 pak je ještě `customDetails`. ten je defaultně false, a nemusíš ho tam dávat. když tam dáš `"customDetails": true`, tak se pro to nevytvoři samostatná stránka, ale pořád bude v galerii na hlavní stránce. pak bys mohl vytvořit vlastní html stránku pro deatily. to kdyžtak dovysvětlim.
+
+## width a height
+každý objekt v `art-pieces.json` má také klíče `width` a `height`. To jsou dimenze obrázku/videa. Ty nepřidáváš manuálně, přidá je tam script, který jsem vytvořil. Je ve vrchní složce webu a jmenuje se `add-dimensions.js`. Spustíš ho pomocí `node ./add-dimensions.js` a on sám přidá `width` a `height` tam, kde ještě nejsou. Takže ho spusť vždy potom, co přidáš něco na web.
+
+Pokud někde `width` nebo `height` není, tak to nevadí. Web bude fungovat. Jsou tam proto, aby se obrázky nepřesouvaly po stránce potom co se načtou, když má někdo pomalý internet.
 
 ## preview změn
 kdyžs to přidal do `art-pieces.json`, tak se můžeš podívat, jak to bude vypadat.

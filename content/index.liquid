@@ -10,26 +10,18 @@
 <div class="image-grid">
   {% assign art-pieces = art-pieces | sortByDate %}
   {% for piece in art-pieces %}
+  {% if piece.height and piece.width %}
+  {% assign height = piece.height | divided_by: piece.width | times: 230 %}
+  {% endif %}
   <div class="grid-piece">
     <a href="/art/{{ piece.title | slug }}" aria-label="Gallery {{ piece.type }} {{ piece.title }}" class="_a-unstyled">
       {% if piece.type == "image" %}
-        <img
-          {% if piece.cloudinaryId %}
-            src="{% cloudinaryImg piece.cloudinaryId %}"
-          {% else %}
-            src="{{piece.url}}"
-          {% endif %}
-          alt="{{piece.alt}}" width="230" loading="lazy"
-        />
+      <img {% if piece.cloudinaryId %} src="{% cloudinaryImg piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {%
+        endif %} alt="{{piece.alt}}" width="230" {% if height %} height="{{ height }}" {% endif %} loading="lazy" />
       {% else %}
-        <video
-          {% if piece.cloudinaryId %}
-            src="{% cloudinaryVideo piece.cloudinaryId %}"
-            poster="{% cloudinaryVideoThumbnail piece.cloudinaryId %}"
-          {% else %}
-            src="{{piece.url}}"
-          {% endif %}
-          alt="{{piece.alt}}" width="230" loop onmouseenter="play()"
+      <video {% if piece.cloudinaryId %} src="{% cloudinaryVideo piece.cloudinaryId %}"
+        poster="{% cloudinaryVideoThumbnail piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {% endif %}
+        alt="{{piece.alt}}" width="230" {% if height %} height="{{ height }}" {% endif %} loop onmouseenter="play()"
         onmouseleave="pause()"></video>
       {% endif %}
       <p class="grid-piece__title">{{ piece.title }}</p>
@@ -49,7 +41,8 @@
     display: grid;
   }
 
-  .grid-piece > a, .video-duration {
+  .grid-piece>a,
+  .video-duration {
     grid-area: 1 / 1;
   }
 
