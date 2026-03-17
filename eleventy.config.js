@@ -1,10 +1,11 @@
 import 'dotenv/config'
 import { DateTime } from "luxon";
 import { Cloudinary } from '@cloudinary/url-gen';
+import metagen from 'eleventy-plugin-metagen';
 const cloudinary = new Cloudinary({
   cloud: {
     cloudName: process.env.CLOUDINARY_NAME
-    }
+  }
 });
 
 const TIME_ZONE = "Europe/Prague";
@@ -12,7 +13,7 @@ const TIME_ZONE = "Europe/Prague";
 export default async function(eleventyConfig) {
 
   // Configure Eleventy
-  eleventyConfig.setLiquidParameterParsing("builtin");
+  // eleventyConfig.setLiquidParameterParsing("builtin");
   eleventyConfig.setInputDirectory("content");
   eleventyConfig.setIncludesDirectory("includes");
   eleventyConfig.addPassthroughCopy({ static: "/" });
@@ -33,6 +34,8 @@ export default async function(eleventyConfig) {
     }
     return localDate;
   });
+
+  eleventyConfig.addPlugin(metagen);
 
   // bundle plugin
   eleventyConfig.addBundle("html");
@@ -65,5 +68,10 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter("sortByDate", async function(arr) {
     return arr.sort((a, b) => a.date < b.date ? -1 : 1)
   });
+
+  eleventyConfig.addFilter("jsonParse", async function(json) {
+    return JSON.parse(json)
+  });
+
 
 };

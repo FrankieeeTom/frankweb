@@ -1,10 +1,12 @@
 {
 	"dependencies": {
-		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy": "3.1.2",
 		"@cloudinary/url-gen": "^1.22.0",
 		"@oscnord/get-video-resolution": "^1.1.0",
 		"dotenv": "^17.3.1",
+		"eleventy-plugin-metagen": "^1.8.4",
 		"image-dimensions": "^2.5.0",
-		"luxon": "^3.7.2"
+		"luxon": "^3.7.2",
+		"picocolors": "^1.1.1"
 	}
 }

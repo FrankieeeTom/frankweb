@@ -1,11 +1,13 @@
-{% layout "templates/base.liquid" %}
+---
+layout: base.liquid
+title: Franta Tomáš
+---
+{% comment %} {% layout "templates/base.liquid" %} {% endcomment %}
 
-{% block head %}
+{% html "head" %}
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-{% endblock head %}
-
-{% block content %}
+{% endhtml %}
 
 <div class="image-grid">
   <div id="grid-size" class="_displaynone" aria-hidden="true"></div>
@@ -119,5 +121,3 @@
     })
   })
 </script>
-
-{% endblock content %}

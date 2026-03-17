@@ -1,23 +1,22 @@
 ---js
 {
-pagination: {
-data: "art-pieces",
-size: 1,
-alias: "piece",
-before: function(paginationData, fullData) {
-// `fullData` is new in v1.0.1 and contains the full Data Cascade thus far
-
-return paginationData.filter(item => (!item.hasOwnProperty("customDetails") || item.customDetails == false)).sort((a, b) => a.date < b.date ? -1 : 1);
+  layout: "base.liquid",
+  pagination: {
+    data: "art-pieces",
+    size: 1,
+    alias: "piece",
+    before: function(paginationData, fullData) {
+      return paginationData.filter(item => (!item.hasOwnProperty("customDetails") || item.customDetails == false)).sort((a, b) => a.date < b.date ? -1 : 1);
+    },
+  },
+  permalink: "/art/{{ piece.title | slug }}/",
+  eleventyComputed: {
+    title: "{{ piece.title }} | Franta Tomáš",
+  }
 }
-},
-permalink: "/art/{{ piece.title | slug }}/",
-}
-
 ---
-
-{% layout "templates/base.liquid" %}
-{% block title %}{{ piece.title }} | Franta Tomáš{% endblock %}
-{% block content %}
+{% comment %} {% layout "templates/base.liquid" %} {% endcomment %}
+{% comment %} {% block title %}{{ piece.title }} | Franta Tomáš{% endblock %} {% endcomment %}
 <div class="art-section">
 
   {% if piece.type == "image" %}
@@ -119,4 +118,3 @@ permalink: "/art/{{ piece.title | slug }}/",
     }
   }
 </style>
-{% endblock content %}

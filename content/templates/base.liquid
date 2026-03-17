@@ -1,11 +1,30 @@
+---
+eleventyComputed:
+  metadata:
+    comments: true
+    desc: Art portfolio of Franta Tomáš
+    # url: https://tannerdolby.com
+    img: https://res.cloudinary.com/dt4tzhayc/image/upload/v1773766857/profile-pic.jpg
+    img_alt: Franta's drawn character
+    name: Franta Tomáš
+    title: "{{ title }}"
+    site_name: Franta Tomáš
+    generator: 11ty
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Franta Tomáš{% endblock %}</title>
+  {% metagen metadata %}
 
+  <!-- icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="preload" as="style"
@@ -15,20 +34,24 @@
   <link rel="preload" href="https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJtEtq.woff2" crossorigin as="font"
     type="font/woff2" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- css -->
   <style>
     {% comment %} {% include 'templates/css/normalize.css' %} {% endcomment %}
     {% include 'templates/css/setup.css' %}
     {% include 'templates/css/layout.css' %}
     {% include 'templates/css/style.css' %}
   </style>
-  {% block head %}{% endblock %}
+
+  <!-- additional stuff (bundle) -->
+  {% getBundle "html", "head" %}
 </head>
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   {% include 'templates/header.liquid' %}
   <main id="main">
-    {% block content %}{% endblock %}
+    {{ content }}
   </main>
   {% include 'templates/footer.liquid' %}
 </body>
