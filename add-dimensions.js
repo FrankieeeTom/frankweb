@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { imageDimensionsFromStream } from 'image-dimensions';
 import { getVideoResolution } from "@oscnord/get-video-resolution";
+import pc from "picocolors";
 const cloudinary = new Cloudinary({
   cloud: {
     cloudName: process.env.CLOUDINARY_NAME,
@@ -13,6 +14,7 @@ const cloudinary = new Cloudinary({
 const PATH = './content/_data/art-pieces.json'
 let data = readFileSync(PATH);
 data = JSON.parse(data)
+let changedCount = 0
 for (const media in data) {
   const element = data[media];
   if (!element.hasOwnProperty("height") || !element.hasOwnProperty("width")) {
@@ -41,7 +43,17 @@ for (const media in data) {
     }
     element.width = info.width
     element.height = info.height
+    changedCount++
+    console.log(
+      pc.blue(
+        `Added width: ${info.width} and height: ${info.height} to "${element.title}" (${element.type})`
+      )
+    )
   }
 }
+console.log(
+  pc.blue(pc.bold(
+    `Done. Added properties to ${changedCount} images/videos.`
+  )))
 const newFile = JSON.stringify(data, null, 2)
 writeFileSync(PATH, newFile)
