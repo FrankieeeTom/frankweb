@@ -12,6 +12,9 @@
   permalink: "/art/{{ piece.title | slug }}/",
   eleventyComputed: {
     title: "{{ piece.title }} | Franta Tomáš",
+    metadata: {
+      desc: "{{ piece.desc }} | Franta's art portfolio",
+    }
   }
 }
 ---
