@@ -13,7 +13,7 @@
   {
     "title": "Ventilation system",
     "date": "2026-01-02",
-    "desc": "One of my firt animations in Blender",
+    "desc": "One of my first animations in Blender",
     "cloudinaryId": "Vent-remaster_hlgcdj",
     "type": "video",
     "alt": "Entity inspired by Kane Pixes",
@@ -53,15 +53,15 @@
     "height": 1308
   },
   {
-    "title": "Stůl s kytkou 3",
+    "title": "Hallway camera",
     "date": "2026-01-06",
-    "desc": "Krásný stůl na kterém je kytka a tak...",
-    "url": "https://images.pexels.com/photos/36375380/pexels-photo-36375380.jpeg",
+    "desc": "My animatronic Terry standing in the hallway",
+    "cloudinaryId": "corridorec_e5xdbg",
     "type": "image",
-    "alt": "Stul, na nem cervena kytka, dva talire, pribory, sklenicky, bily ubrus",
+    "alt": "Terry standing in the hallway",
     "customDetails": false,
-    "width": 4672,
-    "height": 7008
+    "width": 1440,
+    "height": 1080
   },
   {
     "title": "Hotline Turnov",
