@@ -45,9 +45,9 @@
   {
     "title": "Terry the Terrier",
     "date": "2026-01-05",
-    "desc": "Animatronic Render",
+    "desc": "Render of an animatronic Terry. My gf picked this name :*",
     "type": "image",
-    "alt": "Render of an animatronic Terry. My gf picked this name :*",
+    "alt": "Animatronic Render",
     "cloudinaryId": "animatronic6_u2yxwe",
     "width": 736,
     "height": 1308
@@ -64,10 +64,10 @@
     "height": 7008
   },
   {
-    "title": "turnov render",
+    "title": "Hotline Turnov",
     "date": "2026-01-07",
-    "desc": "muj novy render, enjoy",
-    "cloudinaryId": "turnov_first_render",
+    "desc": "Default and first render of my project Hotline Turnov",
+    "cloudinaryId": "0000-0102_wtzmjv",
     "type": "video",
     "alt": "auta jezdi po mostu",
     "width": 720,
