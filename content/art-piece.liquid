@@ -43,10 +43,10 @@
 </div>
 <div class="prev-next">
   {% if pagination.href.previous %}
-  <a class="prev _a-unstyled" href="{{ pagination.href.previous }}">Previous</a>
+  <a class="prev _a-unstyled" href="{{ pagination.href.previous | url }}">Previous</a>
   {% endif %}
   {% if pagination.href.next %}
-  <a class="next _a-unstyled" href="{{ pagination.href.next }}">Next</a>
+  <a class="next _a-unstyled" href="{{ pagination.href.next | url }}">Next</a>
   {% endif %}
 </div>
 
