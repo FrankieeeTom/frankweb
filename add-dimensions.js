@@ -1,10 +1,11 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
 import { readFileSync, writeFileSync } from 'fs';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { imageDimensionsFromStream } from 'image-dimensions';
 import { getVideoResolution } from "@oscnord/get-video-resolution";
 import pc from "picocolors";
 import { exit } from 'process';
+dotenv.config({ path: '.public-env' })
 const cloudinary = new Cloudinary({
   cloud: {
     cloudName: process.env.CLOUDINARY_NAME,
