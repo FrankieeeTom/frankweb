@@ -6,7 +6,7 @@
 - `pnpm install`
 - můžeš `pnpm update`
 - založ si free účet na [Cloudinary](https://cloudinary.com)
-- vytvoř soubor s názvem `.env`
+- otevři soubor s názvem `.public-env`
 - dej do něj id svého účtu, takhle:
 
 ```env
