@@ -8,7 +8,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Build
         run: |
-          ls -lA
+          npm install
+          npx eleventy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
