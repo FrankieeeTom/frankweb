@@ -1,7 +1,8 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
 import { DateTime } from "luxon";
 import { Cloudinary } from '@cloudinary/url-gen';
 import metagen from 'eleventy-plugin-metagen';
+dotenv.config({ path: '.public-env' })
 const cloudinary = new Cloudinary({
   cloud: {
     cloudName: process.env.CLOUDINARY_NAME
