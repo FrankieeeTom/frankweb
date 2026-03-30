@@ -11,12 +11,12 @@
     "height": 480
   },
   {
-    "title": "Stůl s kytkou",
+    "title": "Ventilation system",
     "date": "2026-01-02",
-    "desc": "Krásný stůl na kterém je kytka a tak...",
-    "url": "https://images.pexels.com/photos/36375380/pexels-photo-36375380.jpeg",
-    "type": "image",
-    "alt": "Stul, na nem cervena kytka, dva talire, pribory, sklenicky, bily ubrus",
+    "desc": "One of my firt animations in Blender",
+    "url": "https://res.cloudinary.com/dxapwfrjm/video/upload/v1774901735/Vent-remaster_ibga0r.mp4",
+    "type": "video",
+    "alt": "Entity inspired by Kane Pixes",
     "customDetails": false,
     "width": 4672,
     "height": 7008
