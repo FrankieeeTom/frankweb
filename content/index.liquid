@@ -17,7 +17,8 @@ title: Franta Tomáš
   {% assign ratio = piece.width | divided_by: piece.height %}
   {% endif %}
   <div class="grid-piece">
-    <a href="/art/{{ piece.title | slug }}" aria-label="Gallery {{ piece.type }} {{ piece.title }}" class="_a-unstyled">
+    {%- capture link -%}/art/{{ piece.title | slug }}{%- endcapture -%}
+    <a href="{{ link | url }}" aria-label="Gallery {{ piece.type }} {{ piece.title }}" class="_a-unstyled">
       {% if piece.type == "image" %}
       <img {% if piece.cloudinaryId %} src="{% cloudinaryImg piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {%
         endif %} alt="{{piece.alt}}" width="230" {% if ratio %} style="aspect-ratio:{{ ratio }} auto" {% endif %} loading="lazy" />
