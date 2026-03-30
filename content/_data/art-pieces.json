@@ -14,7 +14,7 @@
     "title": "Ventilation system",
     "date": "2026-01-02",
     "desc": "One of my firt animations in Blender",
-    "url": "https://res.cloudinary.com/dxapwfrjm/video/upload/v1774901735/Vent-remaster_ibga0r.mp4",
+    "cloudinaryId": "Vent-remaster",
     "type": "video",
     "alt": "Entity inspired by Kane Pixes",
     "customDetails": false,
