@@ -75,7 +75,7 @@
   },
   {
     "title": "Ventilation system",
-    "date": "2026-01-02",
+    "date": "2024-25-03",
     "desc": "One of my first animation in Blender",
     "cloudinaryId": "Vent-remaster_hlgcdj",
     "type": "video",
@@ -85,8 +85,8 @@
     "height": 480
   },
     {
-    "title": "Liminal Station",
-    "date": "2027-1-03",
+    "title": "Liminal station",
+    "date": "2024-12-04",
     "desc": "My first bigger backrooms project",
     "cloudinaryId": "liminstation",
     "type": "video",
@@ -94,5 +94,16 @@
     "customDetails": false,
     "width": 640,
     "height": 480
+  },
+  {
+    "title": "My brother as a Bojack Horseman opening scene",
+    "date": "2024-16-03",
+    "desc": "My first project, which I made for my brother's 17th birthday",
+    "cloudinaryId": "Tony-final",
+    "type": "video",
+    "alt": "Bojack Horseman",
+    "customDetails": false,
+    "width": 1920,
+    "height": 1080
   }
 ]
