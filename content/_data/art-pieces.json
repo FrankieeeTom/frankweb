@@ -42,6 +42,16 @@
     "height": 1280
   },
   {
+    "title": "Terry the Terrier",
+    "date": "2025-02-05",
+    "desc": "An analog horror film that delves into my childhood (very personal and emotional)",
+    "type": "video",
+    "alt": "Nostalgic analog horror",
+    "cloudinaryId": "feeloldyet",
+    "width": 640,
+    "height": 480
+  },
+  {
     "title": "Ventilation system",
     "date": "2024-25-03",
     "desc": "One of my first animation in Blender",
