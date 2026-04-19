@@ -26,7 +26,7 @@ title: Franta Tomáš
       <video {% if piece.cloudinaryId %} src="{% cloudinaryVideo piece.cloudinaryId %}"
         poster="{% cloudinaryVideoThumbnail piece.cloudinaryId %}" {% else %} src="{{piece.url}}" {% endif %}
         alt="{{piece.alt}}" width="230" {% if ratio %} style="aspect-ratio:{{ ratio }} auto" {% endif %} loop onmouseenter="play()"
-        onmouseleave="pause()"></video>
+        onmouseleave="pause()" muted></video>
       {% endif %}
       <p class="grid-piece__title">{{ piece.title }}</p>
     </a>
