@@ -5,7 +5,7 @@
     "desc": "fnaf salvage vhs video but with my animatronic Terry",
     "type": "video",
     "alt": "very 'creepy' jumscare",
-    "cloudinaryId": "1400-2000_ucy2nx",
+    "cloudinaryId": "salvageterry",
     "customDetails": false,
     "width": 640,
     "height": 480
@@ -40,6 +40,16 @@
     "alt": "auta jezdi po mostu",
     "width": 720,
     "height": 1280
+  },
+  {
+    "title": "Frutiger aero",
+    "date": "2025-06-20",
+    "desc": "My frutiger aero inspired project.I had big plans for that space, but I've lost motivation to work on it",
+    "cloudinaryId": "0000-0102_wtzmjv",
+    "type": "video",
+    "alt": "frutiger aero robot",
+    "width": 480,
+    "height": 640
   },
   {
     "title": "Feel Old Yet?",
