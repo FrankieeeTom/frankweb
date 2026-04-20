@@ -44,7 +44,7 @@
   {
     "title": "Frutiger aero",
     "date": "2025-06-20",
-    "desc": "My frutiger aero inspired project.I had big plans for that space, but I've lost motivation to work on it",
+    "desc": "My frutiger aero inspired project. I had big plans for that space, but I've lost motivation to work on it",
     "cloudinaryId": "frutigeraero",
     "type": "video",
     "alt": "frutiger aero robot",
@@ -62,6 +62,17 @@
     "height": 480
   },
   {
+    "title": "Backrooms",
+    "date": "2024-02-04",
+    "desc": "Another one of my early attempts making analog horror. I remember that I subdivided the floor and used displacement and it rendered for ages",
+    "cloudinaryId": "Liminal_space_fslyl3",
+    "type": "video",
+    "alt": "Analog horror attempt",
+    "customDetails": false,
+    "width": 640,
+    "height": 480
+  },
+  {
     "title": "Ventilation system",
     "date": "2024-25-03",
     "desc": "One of my first animation in Blender",
@@ -72,7 +83,7 @@
     "width": 640,
     "height": 480
   },
-    {
+  {
     "title": "Liminal station",
     "date": "2024-04-12",
     "desc": "My first bigger backrooms project",
@@ -93,6 +104,8 @@
     "width": 640,
     "height": 480
   },
+
+  
   {
     "title": "My brother as a Bojack opening",
     "date": "2024-03-16",
