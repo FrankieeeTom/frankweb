@@ -161,7 +161,8 @@ html {
   </style>
 
   <!-- additional stuff (bundle) -->
-  
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -213,6 +214,7 @@ html {
   <main id="main">
     
 
+<div class="art-piece-wrapper">
 <div class="art-section">
 
   
@@ -239,7 +241,9 @@ html {
 </div>
 
 <style>
-  #main {
+  .art-piece-wrapper {
+    min-height: 50dvh;
+    margin-block-end: 5rem;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr auto;
@@ -255,7 +259,7 @@ html {
   }
 
   @media (max-width: 600px) {
-    #main {
+    .art-piece-wrapper {
       grid-template-columns: auto;
       grid-template-rows: auto auto auto;
       grid-template-areas: "art" "info" "nav";
@@ -309,6 +313,279 @@ html {
     }
   }
 </style>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="image-grid">
+  <div id="grid-size" class="_displaynone" aria-hidden="true"></div>
+  
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/backrooms" aria-label="Gallery video Backrooms" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/Liminal_space_fslyl3?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/Liminal_space_fslyl3?_a=DATAiZfkZAA0" alt="Analog horror attempt" width="230" style="aspect-ratio:1.3333333333333333 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Backrooms</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/backrooms-render" aria-label="Gallery video Backrooms render" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/OnotoJede_wcnkcu?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/OnotoJede_wcnkcu?_a=DATAiZfkZAA0" alt="analog horror" width="230" style="aspect-ratio:1.3333333333333333 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Backrooms render</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/my-brother-as-a-bojack-opening" aria-label="Gallery video My brother as a Bojack opening" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/Tony-final?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/Tony-final?_a=DATAiZfkZAA0" alt="Bojack Horseman" width="230" style="aspect-ratio:1.7777777777777777 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">My brother as a Bojack opening</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/liminal-station" aria-label="Gallery video Liminal station" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/liminstation?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/liminstation?_a=DATAiZfkZAA0" alt="Entity inspired by Kane Pixes" width="230" style="aspect-ratio:1.3333333333333333 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Liminal station</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/ventilation-system" aria-label="Gallery video Ventilation system" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/Vent-remaster_hlgcdj?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/Vent-remaster_hlgcdj?_a=DATAiZfkZAA0" alt="Entity inspired by Kane Pixes" width="230" style="aspect-ratio:1.3333333333333333 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Ventilation system</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/frutiger-aero" aria-label="Gallery video Frutiger aero" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/frutigeraero?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/frutigeraero?_a=DATAiZfkZAA0" alt="frutiger aero robot" width="230" style="aspect-ratio:0.75 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Frutiger aero</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/salvage" aria-label="Gallery video Salvage" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/salvageterry?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/salvageterry?_a=DATAiZfkZAA0" alt="very 'creepy' jumscare" width="230" style="aspect-ratio:1.3333333333333333 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Salvage</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/terry-the-terrier" aria-label="Gallery image Terry the Terrier" class="_a-unstyled">
+      
+      <img src="https://res.cloudinary.com/dxapwfrjm/image/upload/q_auto/f_auto/animatronic6_u2yxwe?_a=DATAiZfkZAA0" alt="Animatronic Render" width="230" style="aspect-ratio:0.5626911314984709 auto" loading="lazy">
+      
+      <p class="grid-piece__title">Terry the Terrier</p>
+    </a>
+    
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/hallway-camera" aria-label="Gallery image Hallway camera" class="_a-unstyled">
+      
+      <img src="https://res.cloudinary.com/dxapwfrjm/image/upload/q_auto/f_auto/corridorec_e5xdbg?_a=DATAiZfkZAA0" alt="Terry standing in the hallway" width="230" style="aspect-ratio:1.3333333333333333 auto" loading="lazy">
+      
+      <p class="grid-piece__title">Hallway camera</p>
+    </a>
+    
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+  <div class="grid-piece"><a href="/frankweb/art/hotline-turnov" aria-label="Gallery video Hotline Turnov" class="_a-unstyled">
+      
+      <video src="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/0000-0102_wtzmjv?_a=DATAiZfkZAA0" poster="https://res.cloudinary.com/dxapwfrjm/video/upload/q_auto/f_auto:image/0000-0102_wtzmjv?_a=DATAiZfkZAA0" alt="auta jezdi po mostu" width="230" style="aspect-ratio:0.5625 auto" loop="" onmouseenter="play()" onmouseleave="pause()" muted=""></video>
+      
+      <p class="grid-piece__title">Hotline Turnov</p>
+    </a>
+     <div class="video-duration" hidden="">0:00</div> 
+  </div>
+  
+
+  
+</div>
+
+<style>
+  .image-grid {
+    margin: 0 auto;
+  }
+
+  .grid-piece {
+    margin-block-end: 1rem;
+    display: grid;
+  }
+
+  .grid-piece>a,
+  .video-duration {
+    grid-area: 1 / 1;
+  }
+
+  .video-duration {
+    background-color: white;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 8px;
+    font-size: 80%;
+  }
+
+  .grid-piece:hover .video-duration {
+    display: none;
+  }
+
+  .grid-piece img,
+  .grid-piece video {
+    border-radius: 16px;
+  }
+
+  .grid-piece__title {
+    margin-block-start: 0.5em;
+    margin-block-end: 0;
+  }
+
+  .grid-piece img,
+  .grid-piece video,
+  .grid-piece,
+  #grid-size {
+    width: 230px;
+  }
+
+  @media (max-width: 500px) {
+    .grid-piece img,
+    .grid-piece video,
+    .grid-piece,
+    #grid-size {
+      width: 40dvw;
+    }
+  }
+</style>
+
+<script>
+  let elem = document.querySelector('.image-grid');
+  let msnry = new Masonry(elem, {
+    // options
+    itemSelector: '.grid-piece',
+    columnWidth: '#grid-size',
+    gutter: 16,
+    fitWidth: true
+  });
+  const imgLoad = new imagesLoaded('.image-grid')
+  imgLoad.on('always', _ => {
+    msnry.layout()
+  })
+
+  document.querySelectorAll('.grid-piece video').forEach(video => {
+    video.addEventListener('loadeddata', _ => {
+      msnry.layout()
+    })
+  })
+
+  // add duration time to videos
+  const zeroPad = (num, places) => String(num).padStart(places, '0')
+  document.querySelectorAll('.grid-piece video').forEach(video => {
+    video.addEventListener('durationchange', _ => {
+      const minutes = Math.floor(video.duration / 60)
+      const seconds = zeroPad(Math.round(video.duration % 60), 2)
+      const duration = minutes + ':' + seconds
+      const durationElement = video.closest('.grid-piece').querySelector('.video-duration')
+      durationElement.textContent = duration
+      durationElement.hidden = false
+    })
+  })
+</script>
 
   </main>
   <footer class="pagefooter">
